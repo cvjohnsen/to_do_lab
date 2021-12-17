@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Inline Style Button Here -->
+<style type="text/css">
+    .done {
+        text-decoration: line-through;
+        color: red;
+        
+    }
+</style>
+<body>
+    <!-- To Do List -->
+    <ul id="to-do"></ul>
+    <form>
+        <!-- To Do Form -->
+        <!-- Required Input: Text Field & Button -->
+        <!-- Bonus: Add Strikethrough to show completion -->
+        <label for='tasks'>Tasks</label>
+        <input name="tasks" id="tasks" type="text" />
+        <button id="addTask" type="submit">Add Task</button>
+
+    </form>
+
+
+    <div id="order"></div>
+    <form>
+        <!-- Order Form -->
+        <!-- Required Input: 4 Separate Number Fields & Button-->
+        <!-- Bonus: Show the TOTAL SUM of items ordered -->
+        <!-- <label for="cookie"></label>
+        <input name="cookie" id="cookie" type="number" />
+        <button id="add-cookie" type="submit">Order Cookie</button>
+
+        <label for="ice-cream"></label>
+        <input name="ice-cream" id="ice-cream" type="number" />
+        <button id="add-icecream" type="submit">Order Ice Cream</button>
+
+        <label for="sandwich"></label>
+        <input name="sandwich" id="sandwich" type="number" />
+        <button id="add-sandwhich" type="submit">Order Sandwhich</button>
+
+        <label for="potato"></label>
+        <input name="potato" id="potato" type="number" />
+        <button id="add-poatato" type="submit">Order Potato</button> -->
+    </form>
+
+    <div id="forum"></div>
+    <form>
+        <!-- Required Input: Two Text Fields -->
+        <!-- Add post to forum -->
+        <!-- BONUS! Add toggle button to 'post' to count number of likes-->
+        
+        <!-- <label for="username"></label>
+        <input name="username" id="username" type="text" ></input>
+        <label for="message"></label>
+        <input name="message" id="message" type="text"></input>
+        <button id="post" type="submit">Post To Forum</button> -->
+    </form>
+
+    <script>
+        // To Do List:
+        let taskBtn = document.getElementById("addTask")
+        let taskValue = document.getElementById('tasks')
+        let todoList = document.getElementById('to-do')
+
+        // Declare Function (Don't forget preventDefault property!!!)
+        function addTask(doItNow) {
+            doItNow.preventDefault();
+            let taskTodo = document.createElement('li');
+            taskTodo.textContent = taskValue.value;
+            taskTodo.onclick = toggleComplete;
+            todoList.appendChild(taskTodo);
+        }
+
+        function toggleComplete() {
+            this.classList.toggle('done')
+        }
+        // addEvent
+        taskBtn.addEventListener('click', addTask)
+        
+         
+        // Bonus 1: Order Total List
+        
+
+        // Bonus 2: Post Like Forum
+        // let likeBtn = document.getElementById('post')
+        // let userValue =document.getElementById('username')
+        // let forumList = document.getElementById('forum') 
+
+        // function post(i) {
+        //     i.preventDefault();
+        //     let postForum = document.createElement('')
+        // }
+
+
+    </script>
+
+</body>
+</html>
+<!-- white_check_mark
+eyes
+raised_hands
+
+
+
+
+
+
+
+Message 2021-08-dal-classroom -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
